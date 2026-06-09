@@ -1,30 +1,34 @@
 import { auth } from "./firebase.js";
 
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword
+  GoogleAuthProvider,
+  signInWithPopup
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-window.signup = async function () {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+const provider = new GoogleAuthProvider();
+
+window.googleLogin = async function () {
 
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
-    alert("Account Created!");
-  } catch (e) {
-    alert(e.message);
-  }
-};
 
-window.login = async function () {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+    const result = await signInWithPopup(
+      auth,
+      provider
+    );
 
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-    alert("Login Successful!");
+    alert(
+      "Welcome " +
+      result.user.displayName
+    );
+
+    window.location.href =
+      "dashboard.html";
+
   } catch (e) {
+
     alert(e.message);
+    console.log(e);
+
   }
+
 };
