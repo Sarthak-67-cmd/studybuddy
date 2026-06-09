@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+
+<h1>Quick Quiz</h1>
+
+<p>What is 10 + 5 ?</p>
+
+<button onclick="check(12)">12</button>
+<button onclick="check(15)">15</button>
+<button onclick="check(20)">20</button>
+
+<h2 id="result"></h2>
+
+<script>
+function check(ans){
+
+if(ans==15){
+document.getElementById("result").innerHTML="Correct!";
+}
+else{
+document.getElementById("result").innerHTML="Wrong!";
+}
+
+}
+</script>
+
+</body>
+</html>
