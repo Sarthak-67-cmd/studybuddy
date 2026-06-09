@@ -1,4 +1,3 @@
-```javascript
 // firebase.js
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -16,7 +15,4 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
-
-export { auth };
-```
+export const auth = getAuth(app);
