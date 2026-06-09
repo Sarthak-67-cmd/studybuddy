@@ -4,7 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "YOUR_FIREBASE_API_KEY",
   authDomain: "studybuddy-15aef.firebaseapp.com",
   projectId: "studybuddy-15aef",
   storageBucket: "studybuddy-15aef.firebasestorage.app",
@@ -13,4 +13,5 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
