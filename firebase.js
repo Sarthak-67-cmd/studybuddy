@@ -1,3 +1,4 @@
+```javascript
 // firebase.js
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -13,11 +14,9 @@ const firebaseConfig = {
   measurementId: "G-P5FE41QW39"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Authentication
 const auth = getAuth(app);
 
-// Export auth
 export { auth };
+```
