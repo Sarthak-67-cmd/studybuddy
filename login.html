@@ -1,20 +1,170 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>StudyBuddy Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyBuddy Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eeeeee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:450px;
+    background:white;
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    background:#ff4d4d;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:45px;
+    color:white;
+}
+
+h1{
+    text-align:center;
+    margin-top:25px;
+    font-size:48px;
+    font-weight:700;
+}
+
+.subtitle{
+    text-align:center;
+    color:#777;
+    margin-top:10px;
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+.google-btn{
+    width:100%;
+    height:65px;
+    border:2px solid #e5e5e5;
+    border-radius:15px;
+    background:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.google-btn:hover{
+    background:#f8f8f8;
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    margin:30px 0;
+    color:#999;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    flex:1;
+    border-bottom:1px solid #ddd;
+}
+
+.divider span{
+    margin:0 15px;
+}
+
+input{
+    width:100%;
+    height:65px;
+    border:2px solid #e5e5e5;
+    border-radius:15px;
+    padding-left:20px;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.login-btn{
+    width:100%;
+    height:65px;
+    background:#ff4d4d;
+    border:none;
+    color:white;
+    font-size:24px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    opacity:.9;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>StudyBuddy</h1>
+<div class="container">
 
-<button onclick="googleLogin()">
-    Sign in with Google
+<div class="logo">
+📚
+</div>
+
+<h1>Welcome back</h1>
+
+<p class="subtitle">
+Please enter your details to sign in.
+</p>
+
+<button class="google-btn" onclick="googleLogin()">
+🌐 Continue with Google
 </button>
+
+<div class="divider">
+<span>OR</span>
+</div>
+
+<input
+id="email"
+type="email"
+placeholder="E-Mail Address">
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button
+class="login-btn"
+onclick="login()">
+Sign In
+</button>
+
+</div>
 
 <script type="module" src="auth.js"></script>
 
 </body>
-
 </html>
